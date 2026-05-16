@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="40dp">
+
+    <TextView
+        android:id="@+id/hit_miss_ind"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:text="@string/blank_string"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/weapon_name"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/hit_miss_ind"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/weapon_location"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="@string/loc"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/weapon_name"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/heat"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="@string/heat"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@+id/weapon_location"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/weapon_target"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/target"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/weapon_damage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/weapon_to_hit"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="@string/to_hit"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@drawable/tohitframe"
+        app:layout_constraintStart_toEndOf="@+id/weapon_target"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/weapon_damage"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="@string/damage"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:background="@drawable/damage"
+        app:layout_constraintStart_toEndOf="@+id/heat"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/locked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/weapon_to_hit"
+        app:layout_constraintTop_toTopOf="parent" />
+    <com.total.overiden.MultiShotButton
+        android:id="@+id/multi"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:text="@string/checkbox"
+        app:layout_constraintStart_toEndOf="@+id/locked"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/auto_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/shoot"
+        app:layout_constraintStart_toEndOf="@+id/locked"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/success"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="@string/hit"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/locked"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

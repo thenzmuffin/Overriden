@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/blue_frame">
+    <com.total.overiden.UnitTypeIconView
+        android:id="@+id/unit_icon"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <com.total.overiden.HeatView
+        android:id="@+id/heat_label"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/unitName"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/blank_string"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/heat_label"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/physical_attack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/skill_display" />
+
+    <TextView
+        android:id="@+id/ai_target"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@+id/physical_attack"
+        app:layout_constraintTop_toTopOf="@+id/physical_attack" />
+
+
+    <TextView
+        android:id="@+id/hit_miss_ind"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:text="@string/blank_string"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/weapon_name" />
+
+    <TextView
+        android:id="@+id/weapon_name"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/weapon_damage"
+        app:layout_constraintStart_toEndOf="@+id/hit_miss_ind"
+        app:layout_constraintTop_toTopOf="@+id/weapon_damage" />
+
+    <TextView
+        android:id="@+id/weapon_to_hit"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tohitframe"
+        android:gravity="center"
+        android:text="@string/to_hit"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/weapon_damage"
+        app:layout_constraintStart_toEndOf="@+id/weapon_name"
+        app:layout_constraintTop_toTopOf="@+id/weapon_damage" />
+
+    <TextView
+        android:id="@+id/weapon_damage"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/damage"
+        android:gravity="center"
+        android:text="@string/damage"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/weapon_to_hit"
+        app:layout_constraintTop_toBottomOf="@+id/ai_target" />
+
+    <Button
+        android:id="@+id/auto_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/auto"
+        app:layout_constraintStart_toEndOf="@+id/weapon_damage"
+        app:layout_constraintTop_toTopOf="@+id/weapon_damage" />
+<com.total.overiden.OptionButton
+    android:id="@+id/location_table"
+    android:layout_width="60sp"
+    android:layout_height="40sp"
+    app:layout_constraintStart_toEndOf="@+id/auto_button"
+    app:layout_constraintTop_toTopOf="@+id/weapon_damage"/>
+    <com.total.overiden.TwoDSixView
+        android:id="@+id/to_hit_dice"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:text="@string/roll"
+        app:layout_constraintBottom_toBottomOf="@+id/weapon_damage"
+        app:layout_constraintStart_toEndOf="@+id/weapon_damage"
+        app:layout_constraintTop_toTopOf="@+id/weapon_damage" />
+
+    <TextView
+        android:id="@+id/success"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hit"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/weapon_damage"
+        app:layout_constraintStart_toEndOf="@+id/to_hit_dice"
+        app:layout_constraintTop_toTopOf="@+id/weapon_damage" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/pilot_skill"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/unitName"
+        app:layout_constraintEnd_toStartOf="@+id/textView10" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/amm"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/tmm_label"
+        app:layout_constraintTop_toTopOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/tmm_label"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/tmm"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView10" />
+
+    <TextView
+        android:id="@+id/other_label"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/other"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/ai_target"
+        app:layout_constraintStart_toEndOf="@+id/ai_target"
+        app:layout_constraintTop_toTopOf="@+id/ai_target" />
+
+    <Spinner
+        android:id="@+id/other"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/ai_target"
+        app:layout_constraintStart_toEndOf="@+id/other_label"
+        app:layout_constraintTop_toTopOf="@+id/ai_target" />
+
+    <TextView
+        android:id="@+id/skill_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/blank"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/amm_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/blank"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <TextView
+        android:id="@+id/tmm_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/blank"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/tmm_label" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewForceListFragment">
+
+
+    <Button
+        android:id="@+id/overview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Overview"
+        app:layout_constraintStart_toStartOf="@+id/mechContainerView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/units"
+        android:layout_width="300dp"
+        android:layout_height="500dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/forceName" />
+
+    <EditText
+        android:id="@+id/forceName"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/units"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/mechContainerView"
+        android:layout_width="500dp"
+        android:layout_height="600dp"
+        app:layout_constraintStart_toEndOf="@+id/units"
+        app:layout_constraintTop_toBottomOf="@+id/armour">
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/armour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Armour"
+        app:layout_constraintStart_toEndOf="@+id/overview"
+        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/equipment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/equipment"
+        app:layout_constraintStart_toEndOf="@+id/turn_info"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.total.overiden.LockButton
+        android:id="@+id/lock_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lock"
+        app:layout_constraintStart_toEndOf="@+id/equipment"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/turn_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Turn Info"
+        app:layout_constraintStart_toEndOf="@+id/armour"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TurnPhaseFragment">
+
+    <TextView
+        android:id="@+id/card_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="34sp"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/question"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.2" />
+    <EditText
+        android:id="@+id/question"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Question"
+        android:textSize="24sp"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintStart_toEndOf="@+id/card_id"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/add_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Tag"
+        app:layout_constraintStart_toStartOf="@+id/tag_list"
+        app:layout_constraintEnd_toEndOf="@+id/tag_list"
+        app:layout_constraintTop_toBottomOf="@+id/question" />
+
+    <Button
+        android:id="@+id/add_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Result"
+        app:layout_constraintStart_toStartOf="@+id/result_list"
+        app:layout_constraintEnd_toEndOf="@+id/result_list"
+        app:layout_constraintTop_toBottomOf="@+id/tag_list" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tag_list"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_tag" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/result_list"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_result" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

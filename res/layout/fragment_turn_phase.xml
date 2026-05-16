@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TurnPhaseFragment">
+
+    <FrameLayout
+        android:id="@+id/forceContainerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/display_mechs">
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/force_one_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Force Name"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/display_mechs2"
+        app:layout_constraintStart_toEndOf="@+id/display_mechs"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/phase_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phase"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/force_one_name"
+        app:layout_constraintStart_toEndOf="@+id/display_mechs"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/display_mechs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detail View"
+        app:layout_constraintStart_toStartOf="@+id/forceContainerView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/display_mechs2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Switch Force"
+        app:layout_constraintEnd_toEndOf="@+id/forceContainerView"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

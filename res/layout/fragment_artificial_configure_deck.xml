@@ -1,0 +1,225 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.total.artificial.AiConfigureDeckFragment">
+
+    <TextView
+        android:id="@+id/deck_name_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/deck_name"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/deck_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/deck_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="@string/blank"
+        app:layout_constraintStart_toEndOf="@+id/deck_name_label"
+        app:layout_constraintTop_toTopOf="parent" />
+    <Spinner
+        android:id="@+id/deck_type"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/deck_name"
+        app:layout_constraintTop_toTopOf="@+id/deck_name"
+        app:layout_constraintBottom_toBottomOf="@+id/deck_name" />
+
+    <TextView
+        android:id="@+id/card_start_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/starting_instruction"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/card_start_ag"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/card_start_ag" />
+
+    <TextView
+        android:id="@+id/card_agg_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/aggressive"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/card_start_ag"
+        app:layout_constraintTop_toBottomOf="@+id/new_card" />
+    <TextView
+        android:id="@+id/card_bal_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/balanced"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="@+id/card_agg_label"
+        app:layout_constraintStart_toStartOf="@+id/card_start_ba" />
+    <TextView
+        android:id="@+id/card_cau_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cautious"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="@+id/card_agg_label"
+        app:layout_constraintStart_toStartOf="@+id/card_start_ca" />
+    <TextView
+        android:id="@+id/card_def_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/defensive"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="@+id/card_agg_label"
+        app:layout_constraintStart_toStartOf="@+id/card_start_de" />
+    <EditText
+        android:id="@+id/card_start_ag"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/blank"
+        app:layout_constraintStart_toEndOf="@+id/card_start_label"
+        app:layout_constraintTop_toBottomOf="@+id/card_agg_label" />
+    <EditText
+        android:id="@+id/card_start_ba"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/blank"
+        app:layout_constraintStart_toEndOf="@+id/card_start_ag"
+        app:layout_constraintTop_toTopOf="@+id/card_start_ag" />
+    <EditText
+        android:id="@+id/card_start_ca"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/blank"
+        app:layout_constraintStart_toEndOf="@+id/card_start_ba"
+        app:layout_constraintTop_toTopOf="@+id/card_start_ag"  />
+    <EditText
+        android:id="@+id/card_start_de"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/blank"
+        app:layout_constraintStart_toEndOf="@+id/card_start_ca"
+        app:layout_constraintTop_toTopOf="@+id/card_start_ag"  />
+    <Spinner
+        android:id="@+id/card_selection"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/new_card"
+        app:layout_constraintStart_toEndOf="@+id/card_label"
+        app:layout_constraintTop_toTopOf="@+id/new_card" />
+
+    <TextView
+        android:id="@+id/card_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/card_label"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/new_card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/new_card" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/instruction_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/priority" />
+
+    <Button
+        android:id="@+id/add_instruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_instruction"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instruction_list" />
+
+    <Button
+        android:id="@+id/weapon_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Weapon Data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instruction_list" />
+
+    <Button
+        android:id="@+id/new_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_card"
+        app:layout_constraintStart_toEndOf="@+id/card_selection"
+        app:layout_constraintTop_toBottomOf="@+id/deck_name" />
+
+    <Button
+        android:id="@+id/delete_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/delete_card"
+        app:layout_constraintStart_toEndOf="@+id/new_card"
+        app:layout_constraintTop_toTopOf="@+id/new_card" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Priority"
+        app:layout_constraintBottom_toBottomOf="@+id/priority"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/priority" />
+
+    <EditText
+        android:id="@+id/priority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:gravity="center"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/card_start_de" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mod"
+        app:layout_constraintBottom_toBottomOf="@+id/priority"
+        app:layout_constraintStart_toEndOf="@+id/priority"
+        app:layout_constraintTop_toTopOf="@+id/priority" />
+
+    <EditText
+        android:id="@+id/priority_mod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:gravity="center"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/textView18"
+        app:layout_constraintTop_toBottomOf="@+id/card_start_de" />
+
+    <Spinner
+        android:id="@+id/priority_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/priority_mod"
+        app:layout_constraintStart_toEndOf="@+id/priority_mod"
+        app:layout_constraintTop_toTopOf="@+id/priority_mod" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Deck"
+        app:layout_constraintStart_toEndOf="@+id/add_instruction"
+        app:layout_constraintTop_toBottomOf="@+id/instruction_list" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

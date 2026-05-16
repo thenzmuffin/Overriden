@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameSetupFragment">
+    <EditText
+        android:id="@+id/game_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Game"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <Spinner
+        android:id="@+id/force_one"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/forceOneLabel" />
+
+    <Spinner
+        android:id="@+id/force_two"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/force_one"
+        app:layout_constraintTop_toBottomOf="@+id/forceTwoLabel" />
+    <TextView
+        android:id="@+id/forceTwoName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Waiting..."
+        app:layout_constraintStart_toEndOf="@+id/force_one"
+        app:layout_constraintTop_toBottomOf="@+id/forceTwoLabel" />
+    <Spinner
+        android:id="@+id/player_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/force_one"
+        app:layout_constraintTop_toBottomOf="@+id/force_two" />
+    <Button
+        android:id="@+id/bluetooth_server"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Connect"
+        app:layout_constraintStart_toEndOf="@+id/force_one"
+        app:layout_constraintTop_toBottomOf="@+id/player_type" />
+    <TextView
+        android:id="@+id/forceOneLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Force One"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/game_label" />
+
+    <TextView
+        android:id="@+id/forceTwoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Force Two"
+        app:layout_constraintStart_toEndOf="@+id/force_one"
+        app:layout_constraintTop_toBottomOf="@+id/game_label" />
+
+    <CheckBox
+        android:id="@+id/smartHeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/smart_heat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bluetooth_server" />
+    <CheckBox
+        android:id="@+id/pilotDamage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reduced Pilot Injuries"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/smartHeat" />
+    <CheckBox
+        android:id="@+id/useTics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Use TICs (Group like weapons)"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pilotDamage" />
+    <CheckBox
+        android:id="@+id/ov_forced_withdrawal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forced Withdrawal Active"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/useTics" />
+
+    <CheckBox
+        android:id="@+id/balanced_init"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Balanced Initiative"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ov_forced_withdrawal" />
+
+    <CheckBox
+        android:id="@+id/hexless"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:text="Use Hexless Ruleset"
+        app:layout_constraintWidth_percent="0.45"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bluetooth_server" />
+
+    <CheckBox
+        android:id="@+id/external_ecm"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:text="External ECM Present"
+        app:layout_constraintWidth_percent="0.45"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hexless" />
+
+    <CheckBox
+        android:id="@+id/bsp_points"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:text="Using BSP"
+        app:layout_constraintBottom_toBottomOf="@+id/bsp_total"
+        app:layout_constraintEnd_toStartOf="@+id/bsp_total"
+        app:layout_constraintTop_toTopOf="@+id/bsp_total"
+        app:layout_constraintWidth_percent="0.25" />
+
+    <NumberPicker
+        android:id="@+id/bsp_total"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hexless"
+        app:layout_constraintWidth_percent="0.20" />
+    <Button
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Game"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/game_type"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/game_label"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/scenario"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/start"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/generate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Generate"
+        app:layout_constraintStart_toEndOf="@+id/force_two"
+        app:layout_constraintTop_toTopOf="@+id/force_two" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal">
+
+
+    <TextView
+        android:id="@+id/ticGroup"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:text="@string/grp" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/description" />
+
+    <TextView
+        android:id="@+id/heat"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:text="@string/heat"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/damage"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:text="@string/damage"
+        android:textAlignment="center" />
+    <TextView
+        android:id="@+id/pointBlank"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:text="@string/pb"
+        android:textAlignment="center" />
+    <TextView
+        android:id="@+id/shortRange"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:text="@string/sh"
+        android:textAlignment="center" />
+    <TextView
+        android:id="@+id/mediumRange"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:text="@string/me"
+        android:textAlignment="center" />
+    <TextView
+        android:id="@+id/longRange"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:text="@string/lo"
+        android:textAlignment="center" />
+    <TextView
+        android:id="@+id/extremeRange"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:text="@string/ex"
+        android:textAlignment="center" />
+</LinearLayout>

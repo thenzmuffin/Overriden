@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/blue_frame">
+
+    <com.total.overiden.UnitTypeIconView
+        android:id="@+id/unit_icon"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.total.overiden.LockButton
+        android:id="@+id/target_locked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="CheckBox"
+        app:layout_constraintEnd_toStartOf="@+id/unit_icon"
+        app:layout_constraintTop_toTopOf="parent" />
+    <com.total.overiden.HeatView
+        android:id="@+id/heat_label"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/move_mode_group"
+        android:layout_width="400dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heat_label">
+
+        <com.total.overiden.MoveButton
+            android:id="@+id/move_mode_still"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Stand Still" />
+        <com.total.overiden.MoveButton
+            android:id="@+id/move_mode_crawl"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Crawl" />
+        <com.total.overiden.MoveButton
+            android:id="@+id/move_mode_walk"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Walk" />
+
+        <com.total.overiden.MoveButton
+            android:id="@+id/move_mode_run"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Run" />
+
+        <com.total.overiden.MoveButton
+            android:id="@+id/move_mode_jump"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Jump" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/unitName"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/heat_label"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="TMM"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/target_locked"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tmm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="TextView"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/prone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Currently Prone"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/move_mode_group"
+        app:layout_constraintTop_toTopOf="@+id/move_mode_group" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/damage_record_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_psr" />
+
+    <TextView
+        android:id="@+id/hexes_moved_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hexes Moved"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/sub_five"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/move_mode_group" />
+    <Button
+        android:id="@+id/sub_five"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="65sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="-5"
+        app:layout_constraintStart_toEndOf="@+id/hexes_moved_label"
+        app:layout_constraintTop_toBottomOf="@+id/move_mode_group" />
+
+    <Button
+        android:id="@+id/sub_one"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="65sp"
+        android:layout_height="wrap_content"
+        android:text="-1"
+        app:layout_constraintStart_toEndOf="@+id/sub_five"
+        app:layout_constraintTop_toBottomOf="@+id/move_mode_group" />
+
+    <TextView
+        android:id="@+id/value"
+        android:layout_width="40sp"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@+id/sub_one"
+        app:layout_constraintStart_toEndOf="@+id/sub_one"
+        app:layout_constraintTop_toTopOf="@+id/sub_one" />
+
+    <Button
+        android:id="@+id/add_one"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="65sp"
+        android:layout_height="wrap_content"
+        android:text="+1"
+        app:layout_constraintStart_toEndOf="@+id/value"
+        app:layout_constraintTop_toBottomOf="@+id/move_mode_group" />
+
+    <Button
+        android:id="@+id/add_five"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="65sp"
+        android:layout_height="wrap_content"
+        android:text="+5"
+        app:layout_constraintStart_toEndOf="@+id/add_one"
+        app:layout_constraintTop_toBottomOf="@+id/move_mode_group" />
+
+    <Button
+        android:id="@+id/add_psr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_psr"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sub_five" />
+</androidx.constraintlayout.widget.ConstraintLayout>

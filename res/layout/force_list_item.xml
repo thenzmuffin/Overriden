@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/list_item_selector"
+        android:layout_weight="1"
+        android:text="@string/element_text"/>
+
+    <Button
+        android:id="@+id/edit"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:text="Edit" />
+
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:text="Delete" />
+    <Button
+        android:id="@+id/free_up"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:text="Free" />
+</LinearLayout>

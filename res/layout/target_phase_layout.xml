@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/blue_frame">
+    <com.total.overiden.UnitTypeIconView
+        android:id="@+id/unit_icon"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tmm_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zero"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/tmm_label"
+        app:layout_constraintTop_toTopOf="@+id/tmm_label" />
+
+    <TextView
+        android:id="@+id/amm_label"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="AMM:"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/skill_display"
+        app:layout_constraintTop_toTopOf="@+id/skill_display" />
+
+    <com.total.overiden.HeatView
+        android:id="@+id/heat_label"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.total.overiden.HeatView
+        android:id="@+id/predicted_heat"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+    <TextView
+        android:id="@+id/edgePoints"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/unit_icon"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/unitName"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/blank"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/heat_label"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/forcedWithdrawal"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/forced_withdrawal"
+        android:textColor="@color/DarkRed"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/unitName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/target"
+        android:layout_width="250sp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heat_label" />
+
+    <com.total.overiden.FacingButton
+        android:id="@+id/facing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@+id/tmm_display"
+        app:layout_constraintTop_toTopOf="@+id/target" />
+    <com.total.overiden.OptionButton
+        android:id="@+id/indirect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/facing"
+        app:layout_constraintTop_toTopOf="@+id/target" />
+    <com.total.overiden.OptionButton
+        android:id="@+id/ecm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/indirect"
+        app:layout_constraintTop_toBottomOf="@+id/indirect" />
+
+    <TextView
+        android:id="@+id/skill_label"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="@string/skill"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/heat_label"
+        app:layout_constraintTop_toBottomOf="@+id/unitName" />
+
+    <TextView
+        android:id="@+id/tmm_label"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="TMM:"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/target"
+        app:layout_constraintTop_toBottomOf="@+id/amm_label" />
+
+    <TextView
+        android:id="@+id/other_label"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="Other:"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/other"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tmm_label" />
+
+    <TextView
+        android:id="@+id/range_label"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="Range:"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/partial_cover" />
+
+    <CheckBox
+        android:id="@+id/partial_cover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Partial Cover"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/other"
+        app:layout_constraintTop_toTopOf="@+id/other" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Predicted Heat"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/unit_icon" />
+
+    <TextView
+        android:id="@+id/tsm_activated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TSM Activated"
+        android:textStyle="bold"
+        android:textColor="@color/DarkRed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/predicted_heat" />
+    <TextView
+        android:id="@+id/skill_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/skill_label"
+        app:layout_constraintTop_toBottomOf="@+id/unitName" />
+
+    <TextView
+        android:id="@+id/amm_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/amm_label"
+        app:layout_constraintTop_toTopOf="@+id/amm_label" />
+
+    <LinearLayout
+        android:id="@+id/status"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tsm_activated"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/item_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+    <Button
+        android:id="@+id/sub_five"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="65sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="-5"
+        app:layout_constraintStart_toEndOf="@+id/range_label"
+        app:layout_constraintTop_toTopOf="@+id/range_label" />
+
+    <Button
+        android:id="@+id/sub_one"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="65sp"
+        android:layout_height="wrap_content"
+        android:text="-1"
+        app:layout_constraintStart_toEndOf="@+id/sub_five"
+        app:layout_constraintTop_toTopOf="@+id/range_label"  />
+
+    <TextView
+        android:id="@+id/value"
+        android:layout_width="40sp"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@+id/sub_one"
+        app:layout_constraintStart_toEndOf="@+id/sub_one"
+        app:layout_constraintTop_toTopOf="@+id/sub_one" />
+
+    <Button
+        android:id="@+id/add_one"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="65sp"
+        android:layout_height="wrap_content"
+        android:text="+1"
+        app:layout_constraintStart_toEndOf="@+id/value"
+        app:layout_constraintTop_toTopOf="@+id/range_label"  />
+
+    <Button
+        android:id="@+id/add_five"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="65sp"
+        android:layout_height="wrap_content"
+        android:text="+5"
+        app:layout_constraintStart_toEndOf="@+id/add_one"
+        app:layout_constraintTop_toTopOf="@+id/range_label" />
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@+id/range_label"
+        app:layout_constraintTop_toTopOf="@+id/range_label">
+
+        <com.total.overiden.MoveButton
+            android:id="@+id/point_blank"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="RadioButton" />
+
+        <com.total.overiden.MoveButton
+            android:id="@+id/short_range"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="RadioButton" />
+
+        <com.total.overiden.MoveButton
+            android:id="@+id/medium_range"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="RadioButton" />
+
+        <com.total.overiden.MoveButton
+            android:id="@+id/long_range"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="RadioButton" />
+
+        <com.total.overiden.MoveButton
+            android:id="@+id/extreme_range"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="RadioButton" />
+
+    </RadioGroup>
+    <Spinner
+        android:id="@+id/spotter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/radioGroup"
+        app:layout_constraintTop_toTopOf="@+id/radioGroup" />
+    <com.total.overiden.LockButton
+        android:id="@+id/target_locked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="CheckBox"
+        app:layout_constraintEnd_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/other"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/other_label"
+        app:layout_constraintTop_toBottomOf="@+id/target" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/blue_frame">
+
+    <TextView
+        android:id="@+id/unitName"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/element_text"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/tmm"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/unitName"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/tmm"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/element_text"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/textView12"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/target"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.3"
+        android:background="@drawable/list_item_selector"
+        android:text="@string/none"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/unitName" />
+    <TextView
+        android:id="@+id/target_tmm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/list_item_selector"
+        android:text="@string/element_text"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/target"
+        app:layout_constraintTop_toTopOf="@id/target"
+        app:layout_constraintWidth_percent="0.1" />
+
+    <TextView
+        android:id="@+id/other"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/list_item_selector"
+        android:text="@string/element_text"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/tmm"
+        app:layout_constraintTop_toTopOf="@id/target"
+        app:layout_constraintWidth_percent="0.15" />
+
+    <TextView
+        android:id="@+id/weapon_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.4"
+        android:background="@drawable/list_item_selector"
+        android:text="@string/element_text"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/target" />
+
+    <TextView
+        android:id="@+id/weapon_to_hit"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="@string/element_text"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:background="@drawable/tohitframe"
+        app:layout_constraintStart_toEndOf="@+id/weapon_name"
+        app:layout_constraintTop_toTopOf="@+id/weapon_name"
+        app:layout_constraintWidth_percent="0.3" />
+
+    <TextView
+        android:id="@+id/weapon_damage"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="@string/element_text"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:background="@drawable/damage"
+        app:layout_constraintStart_toEndOf="@+id/weapon_to_hit"
+        app:layout_constraintTop_toTopOf="@+id/weapon_name"
+        app:layout_constraintWidth_percent="0.3" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/damage_record_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weapon_name" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

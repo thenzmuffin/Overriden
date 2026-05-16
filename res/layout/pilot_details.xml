@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditPilotDialogFragment">
+
+    <EditText
+        android:id="@+id/pilot_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bob Ivanovich"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/gunnery_skill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/textView15"
+        app:layout_constraintTop_toBottomOf="@+id/pilot_name" />
+
+    <Button
+        android:id="@+id/addGunnery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="@+id/gunnery_skill"
+        app:layout_constraintStart_toEndOf="@+id/gunnery_skill"
+        app:layout_constraintTop_toTopOf="@+id/gunnery_skill" />
+    <Spinner
+        android:id="@+id/injuries"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/textView15"
+        app:layout_constraintTop_toTopOf="@+id/textView17" />
+
+    <Spinner
+        android:id="@+id/piloting_skill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/textView16"
+        app:layout_constraintTop_toBottomOf="@+id/pilot_name" />
+
+    <Button
+        android:id="@+id/addPiloting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="@+id/piloting_skill"
+        app:layout_constraintStart_toEndOf="@+id/piloting_skill"
+        app:layout_constraintTop_toTopOf="@+id/piloting_skill" />
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gunnery:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pilot_name" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Injuries:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/edgeTokens" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Piloting:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/addGunnery"
+        app:layout_constraintTop_toBottomOf="@+id/pilot_name" />
+
+    <TextView
+        android:id="@+id/edgeTokens"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edge:"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/addEdge"
+        app:layout_constraintStart_toEndOf="@+id/addGunnery"
+        app:layout_constraintTop_toBottomOf="@+id/addPiloting" />
+
+    <CheckBox
+        android:id="@+id/namedPilot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Named Pilot"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addEdgeSkill" />
+
+    <TextView
+        android:id="@+id/totalSP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total SP : "
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/namedPilot" />
+
+    <TextView
+        android:id="@+id/unusedSP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unused SP : "
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/addGunnery"
+        app:layout_constraintTop_toBottomOf="@+id/namedPilot" />
+
+    <TextView
+        android:id="@+id/gunnerySP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gunnery SP : "
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/unusedSP" />
+
+    <TextView
+        android:id="@+id/pilotingSP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Piloting SP : "
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/unusedSP"
+        app:layout_constraintTop_toBottomOf="@+id/unusedSP" />
+
+    <TextView
+        android:id="@+id/edgeSP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edge SP : "
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pilotingSP" />
+
+    <TextView
+        android:id="@+id/skillSP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Skill SP : "
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/pilotingSP"
+        app:layout_constraintTop_toBottomOf="@+id/pilotingSP" />
+
+    <Button
+        android:id="@+id/addEdge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        app:layout_constraintStart_toEndOf="@+id/piloting_skill"
+        app:layout_constraintTop_toBottomOf="@+id/addPiloting" />
+    <Button
+        android:id="@+id/addEdgeSkill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        app:layout_constraintStart_toEndOf="@+id/piloting_skill"
+        app:layout_constraintTop_toBottomOf="@+id/addEdge" />
+    <TextView
+        android:id="@+id/edgeSkills"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edge Skills :"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/addEdgeSkill"
+        app:layout_constraintBottom_toBottomOf="@+id/addEdgeSkill" />
+</androidx.constraintlayout.widget.ConstraintLayout>

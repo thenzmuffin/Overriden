@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TurnPhaseFragment">
+
+    <TextView
+        android:id="@+id/card_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.2" />
+
+    <TextView
+        android:id="@+id/card_heat_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Heat Limit:"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/heat_def"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/heat_def" />
+    <TextView
+        android:id="@+id/heat_def_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/blank"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/heat_def"
+        app:layout_constraintTop_toBottomOf="@+id/card_id" />
+    <TextView
+        android:id="@+id/card_crit_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Can Crit"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="@+id/heat_def_label"
+        app:layout_constraintStart_toStartOf="@+id/heat_crit" />
+    <TextView
+        android:id="@+id/card_kill_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/can_kill"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="@+id/heat_def_label"
+        app:layout_constraintStart_toStartOf="@id/heat_kill" />
+    <TextView
+        android:id="@+id/card_death_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/last_gasp"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="@+id/heat_def_label"
+        app:layout_constraintStart_toStartOf="@id/heat_death" />
+    <EditText
+        android:id="@+id/heat_def"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/blank"
+        app:layout_constraintStart_toEndOf="@+id/card_heat_label"
+        app:layout_constraintTop_toBottomOf="@+id/heat_def_label" />
+    <EditText
+        android:id="@+id/heat_crit"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/blank"
+        app:layout_constraintStart_toEndOf="@+id/heat_def"
+        app:layout_constraintTop_toTopOf="@+id/heat_def" />
+    <EditText
+        android:id="@+id/heat_kill"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/blank"
+        app:layout_constraintStart_toEndOf="@+id/heat_crit"
+        app:layout_constraintTop_toTopOf="@+id/heat_def"  />
+    <EditText
+        android:id="@+id/heat_death"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/blank"
+        app:layout_constraintStart_toEndOf="@+id/heat_kill"
+        app:layout_constraintTop_toTopOf="@+id/heat_def"  />
+
+    <Button
+        android:id="@+id/add_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Target"
+        app:layout_constraintEnd_toEndOf="@+id/target_set"
+        app:layout_constraintStart_toStartOf="@+id/target_set"
+        app:layout_constraintTop_toBottomOf="@+id/heat_death" />
+
+    <Button
+        android:id="@+id/add_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Priority"
+        app:layout_constraintEnd_toEndOf="@+id/result_list"
+        app:layout_constraintStart_toStartOf="@+id/result_list"
+        app:layout_constraintTop_toBottomOf="@+id/target_set" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/target_set"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_tag" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/result_list"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_result" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

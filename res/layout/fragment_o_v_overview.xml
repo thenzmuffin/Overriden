@@ -1,0 +1,140 @@
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.total.overide.OVOverviewFragment">
+
+
+        <TextView
+            android:id="@+id/editTextText4"
+            android:layout_width="114dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text="@string/jumping_mp"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/jumping"
+            app:layout_constraintStart_toStartOf="@+id/editTextText3"
+            app:layout_constraintTop_toBottomOf="@+id/running" />
+
+        <TextView
+            android:id="@+id/editTextText3"
+            android:layout_width="114dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text="@string/running_mp"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/running"
+            app:layout_constraintStart_toStartOf="@+id/editTextText2"
+            app:layout_constraintTop_toBottomOf="@+id/walking" />
+
+        <com.total.overiden.PilotHealthView
+            android:id="@+id/pilotHealthView"
+            android:layout_width="300dp"
+            android:layout_height="80dp"
+            android:paddingStart="20dp"
+            android:paddingBottom="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/editTextText"
+            android:layout_width="114dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text="@string/mech_id"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/mechID"
+            app:layout_constraintStart_toStartOf="@+id/equipmentList"
+            app:layout_constraintTop_toTopOf="@+id/mechID" />
+
+        <TextView
+            android:id="@+id/editTextText2"
+            android:layout_width="114dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text="@string/walking_mp"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/walking"
+            app:layout_constraintStart_toStartOf="@+id/editTextText"
+            app:layout_constraintTop_toBottomOf="@+id/mechID" />
+
+        <TextView
+            android:id="@+id/editTextText5"
+            android:layout_width="114dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text="@string/heat_sinks"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/heatSinks"
+            app:layout_constraintStart_toStartOf="@+id/editTextText4"
+            app:layout_constraintTop_toBottomOf="@+id/jumping" />
+
+        <TextView
+            android:id="@+id/mechID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text="@string/blank"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/equipmentList"
+            app:layout_constraintStart_toEndOf="@+id/editTextText"
+            app:layout_constraintTop_toBottomOf="@+id/pilotHealthView" />
+
+        <TextView
+            android:id="@+id/walking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text="@string/blank"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/equipmentList"
+            app:layout_constraintStart_toEndOf="@+id/editTextText2"
+            app:layout_constraintTop_toBottomOf="@+id/mechID" />
+
+        <TextView
+            android:id="@+id/running"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text="@string/blank"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/equipmentList"
+            app:layout_constraintStart_toEndOf="@+id/editTextText3"
+            app:layout_constraintTop_toBottomOf="@+id/walking" />
+
+        <TextView
+            android:id="@+id/jumping"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text="@string/blank"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/equipmentList"
+            app:layout_constraintStart_toEndOf="@+id/editTextText4"
+            app:layout_constraintTop_toBottomOf="@+id/running" />
+
+        <TextView
+            android:id="@+id/heatSinks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text="@string/blank"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/equipmentList"
+            app:layout_constraintStart_toEndOf="@+id/editTextText5"
+            app:layout_constraintTop_toBottomOf="@+id/jumping" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/equipmentList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/heatSinks" />
+    </androidx.constraintlayout.widget.ConstraintLayout>

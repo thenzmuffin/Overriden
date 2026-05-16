@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/blue_frame">
+    <com.total.overiden.UnitTypeIconView
+        android:id="@+id/unit_icon"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <com.total.overiden.HeatView
+        android:id="@+id/heat_label"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/edgePoints"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/unit_icon"
+        app:layout_constraintTop_toTopOf="parent" />
+    <com.total.overiden.OptionButton
+        android:id="@+id/ecm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Activate ECM"
+        app:layout_constraintEnd_toStartOf="@+id/unit_icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.total.overiden.OptionButton
+        android:id="@+id/retreated"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:text="Active"
+        app:layout_constraintEnd_toStartOf="@+id/ecm"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/unitName"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/heat_label"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/forcedWithdrawal"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        android:text="Forced Withdrawal"
+        android:textColor="@color/DarkRed"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/unitName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.total.overiden.MechWireframeView
+        android:id="@+id/wireframe"
+        android:layout_width="100dp"
+        android:layout_height="176dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/damage_record_list" />
+    <LinearLayout
+        android:id="@+id/actions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heat_label"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/damage_record_list"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/wireframe"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/actions" />
+</androidx.constraintlayout.widget.ConstraintLayout>

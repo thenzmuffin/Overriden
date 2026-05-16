@@ -1,0 +1,144 @@
+
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.total.overide.EditListFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/overview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Overview"
+            app:layout_constraintStart_toStartOf="@+id/mechContainerView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/name_filter"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/forceName" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/catalog"
+            android:layout_width="300dp"
+            android:layout_height="0dp"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/filter"
+            app:layout_constraintBottom_toTopOf="@+id/addUnit" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/units"
+            android:layout_width="300dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toEndOf="@+id/catalog"
+            app:layout_constraintTop_toBottomOf="@+id/filter"
+            app:layout_constraintBottom_toTopOf="@+id/addUnit" />
+
+        <EditText
+            android:id="@+id/forceName"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/units"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/addUnit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_unit"
+            app:layout_constraintStart_toStartOf="@+id/units"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <Button
+            android:id="@+id/removeUnit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/remove_unit"
+            app:layout_constraintStart_toStartOf="@+id/catalog"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/mechContainerView"
+            android:layout_width="500dp"
+            android:layout_height="600dp"
+            app:layout_constraintStart_toEndOf="@+id/units"
+            app:layout_constraintTop_toBottomOf="@+id/armour">
+
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/armour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Armour"
+            app:layout_constraintStart_toEndOf="@+id/overview"
+            app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/equipment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/equipment"
+            app:layout_constraintStart_toEndOf="@+id/armour"
+            app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reset_damage"
+            app:layout_constraintStart_toEndOf="@+id/equipment"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/force_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="@+id/forceName"
+            app:layout_constraintEnd_toStartOf="@+id/forceName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <Spinner
+            android:id="@+id/unit_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/name_filter"
+            app:layout_constraintTop_toTopOf="@+id/name_filter" />
+
+        <Button
+            android:id="@+id/filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/filter"
+            app:layout_constraintStart_toEndOf="@+id/unit_type"
+            app:layout_constraintTop_toTopOf="@+id/name_filter" />
+
+        <Button
+            android:id="@+id/add_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_group"
+            app:layout_constraintEnd_toEndOf="@+id/catalog"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <Button
+            android:id="@+id/del_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/del_group"
+            app:layout_constraintEnd_toEndOf="@+id/units"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
