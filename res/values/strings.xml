@@ -1,0 +1,145 @@
+<resources>
+    <string name="app_name">Overiden</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">Total Override</string>
+    <string name="second_fragment_label">Maintain Force Lists</string>
+    <string name="edit_list_fragment_label">Edit Force List</string>
+    <string name="next">Next</string>
+    <string name="new_force">New OV Force</string>
+    <string name="element_text">Default</string>
+    <string name="add_from_mtf">Add From MTF</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="jumping_mp">Jumping MP:</string>
+    <string name="running_mp">Running MP:</string>
+    <string name="mech_id">Mech ID:</string>
+    <string name="walking_mp">Walking MP:</string>
+    <string name="heat_sinks">Heat Sinks:</string>
+    <string name="blank">Default</string>
+    <string name="force_name">Force Name</string>
+    <string name="remove_unit">Remove Unit</string>
+    <string name="add_unit">Add Unit</string>
+    <string name="forceNameHint">Declare the Name for the Force</string>
+    <string name="new_game">New Game</string>
+    <string name="continueBut">Continue</string>
+    <string name="force_list">Force List</string>
+    <string name="catalog">Catalog</string>
+    <string name="armour">Armour</string>
+    <string name="overview">Overview</string>
+    <string name="configure_tics">Configure Tics</string>
+    <string name="equipment">Equipment</string>
+    <string name="delete">Delete</string>
+    <string name="ok_button">OK</string>
+    <string name="reset_damage">Reset Damage</string>
+    <string name="to_hit">to hit</string>
+    <string name="target">target</string>
+    <string name="loc">Loc</string>
+    <string name="damage">Damage</string>
+    <string name="name">Name</string>
+    <string name="blank_string" />
+    <string name="checkbox">CheckBox</string>
+    <string name="none">None</string>
+    <string name="tmm">TMM:</string>
+    <string name="hit">Hit</string>
+    <string name="miss">Miss</string>
+    <string name="auto">Auto</string>
+    <string name="shoot">Shoot</string>
+    <string name="other">Other:</string>
+    <string name="amm">AMM</string>
+    <string name="roll">Roll</string>
+    <string name="pilot_skill">Pilot Skill</string>
+    <string name="details">Details</string>
+    <string name="previous_phase">Previous\nPhase</string>
+    <string name="next_phase">Next\nPhase</string>
+    <string name="complete_turn">Complete\nTurn</string>
+    <string name="resync_turn">Resync Turn</string>
+    <string name="end_game">End Game</string>
+    <string name="add_psr">Add PSR</string>
+    <string name="add_button">Add</string>
+    <string name="update_button">Update</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="boom">Boom</string>
+    <string name="weapon_jammed">Weapon Jammed</string>
+    <string name="heat_scale">Level : Effects\n
+30 : Shutdown\n
+28 : Ammo Exp, avoid on 8+\n
+26 : Shutdown, avoid on 10+\n
+25 : -5 Movement Points\n
+24 : +4 Modifier to Fire\n
+23 : Ammo Exp, avoid on 6+\n
+22 : Shutdown, avoid on 8+\n
+20 : -4 Movement Points\n
+19 : Ammo Exp, avoid on 4+\n
+18 : Shutdown, avoid on 6+\n
+17 : +3 Modifier to Fire\n
+15 : -3 Movement Points\n
+14 : Shutdown, avoid on 4+\n
+13 : +2 Modifier to Fire\n
+10 : -2 Movement Points\n
+ 8 : +1 Modifier to Fire\n
+ 5 : -1 Movement Points</string>
+    <string name="ov_heat_scale">Level : Effects\n
+5 : Shutdown\n
+4 : Ammo Exp, avoid on 8+\n
+3 : Shutdown, avoid on 8+\n
+2 : +1 Ranged Attack Mod\n
+1 : -2 Ground Move</string>
+    <string name="unit_destroyed">Unit Destroyed</string>
+    <string name="pilot_unconcious">Pilot Unconscious</string>
+    <string name="crew_stunned">Crew Stunned</string>
+    <string name="description">Description</string>
+    <string name="grp">Grp</string>
+    <string name="heat">Heat</string>
+    <string name="pb">PB</string>
+    <string name="sh">Sh</string>
+    <string name="me">Me</string>
+    <string name="lo">Lo</string>
+    <string name="ex">Ex</string>
+    <string name="edit">Edit</string>
+    <string name="smart_heat">Use Smart Heat Calculation</string>
+    <string name="new_tw_force">New TW Force</string>
+    <string name="received_damage">Received Damage</string>
+    <string name="delivered_damage">Delivered Damage</string>
+    <string name="target_damage">Target Damage</string>
+    <string name="filter">Filter</string>
+    <string name="add_group">Add Group</string>
+    <string name="del_group">Del Group</string>
+    <string name="load_ai">Load AI</string>
+    <string name="load_scenario">Load Scenario</string>
+    <string name="bluetooth_client">Bluetooth Client</string>
+    <string name="weapon_destroyed">Weapon Destroyed</string>
+    <string name="start">Start</string>
+    <string name="play">Play</string>
+    <string name="card_label">Card Label</string>
+    <string name="add_instruction">Add Instruction</string>
+    <string name="delete_instruction">Delete Instruction</string>
+    <string name="new_card">New Card</string>
+    <string name="delete_card">Delete Card</string>
+    <string name="deck_name">Deck Name</string>
+    <string name="detail_view">Detail View</string>
+    <string name="save">Save</string>
+    <string name="reset_dice">Reset Dice</string>
+    <string name="force_two_name">Force Two Name</string>
+    <string name="force_one_name">Force One Name</string>
+    <string name="won">Won</string>
+    <string name="commander_card">Commander Card:</string>
+    <string name="forced_withdrawal">Forced Withdrawal</string>
+    <string name="zero">0</string>
+    <string name="skill">Skill:</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="confirmed">Confirmed</string>
+    <string name="add_new_target_type">Add New Target Type</string>
+    <string name="defensive">Defensive</string>
+    <string name="cautious">Cautious</string>
+    <string name="balanced">Balanced</string>
+    <string name="aggressive">Aggressive</string>
+    <string name="starting_instruction">Starting Instruction</string>
+    <string name="last_gasp">Last Gasp</string>
+    <string name="can_kill">Can Kill</string>
+    <string name="rear_arc_q">Can Shoot Enemy in rear arc?</string>
+    <string name="na">NA</string>
+    <string name="unknown">Unknown Type</string>
+    <string name="triggered">Triggered</string>
+    <string name="activate">Activate</string>
+</resources>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="other_values_array">
+        <item>-3</item>
+        <item>-2</item>
+        <item>-1</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="range_values_array">
+        <item>Point Blank</item>
+        <item>Short Range</item>
+        <item>Medium Range</item>
+        <item>Long Range</item>
+        <item>Extreme Range</item>
+    </string-array>
+    <string-array name="ov_front_locations">
+        <item>TORSO</item>
+        <item>RIGHTARM</item>
+        <item>RIGHTARM</item>
+        <item>RIGHTLEG</item>
+        <item>TORSO</item>
+        <item>TORSO</item>
+        <item>TORSO</item>
+        <item>LEFTLEG</item>
+        <item>LEFTARM</item>
+        <item>LEFTARM</item>
+        <item>HEAD</item>
+    </string-array>
+    <string-array name="tw_front_locations">
+        <item>CENTRETORSO</item>
+        <item>RIGHTARM</item>
+        <item>RIGHTARM</item>
+        <item>RIGHTLEG</item>
+        <item>RIGHTTORSO</item>
+        <item>CENTRETORSO</item>
+        <item>LEFTTORSO</item>
+        <item>LEFTLEG</item>
+        <item>LEFTARM</item>
+        <item>LEFTARM</item>
+        <item>HEAD</item>
+    </string-array>
+    <string-array name="ov_punch_locations">
+        <item>RIGHTARM</item>
+        <item>TORSO</item>
+        <item>TORSO</item>
+        <item>TORSO</item>
+        <item>LEFTARM</item>
+        <item>HEAD</item>
+    </string-array>
+    <string-array name="tw_punch_locations">
+        <item>RIGHTARM</item>
+        <item>RIGHTTORSO</item>
+        <item>CENTRETORSO</item>
+        <item>LEFTTORSO</item>
+        <item>LEFTARM</item>
+        <item>HEAD</item>
+    </string-array>
+    <string-array name="tw_left_locations">
+        <item>LEFTTORSO</item>
+        <item>LEFTLEG</item>
+        <item>LEFTARM</item>
+        <item>LEFTARM</item>
+        <item>LEFTLEG</item>
+        <item>LEFTTORSO</item>
+        <item>CENTRETORSO</item>
+        <item>RIGHTTORSO</item>
+        <item>RIGHTARM</item>
+        <item>RIGHTLEG</item>
+        <item>HEAD</item>
+    </string-array>
+    <string-array name="tw_right_locations">
+        <item>RIGHTTORSO</item>
+        <item>RIGHTLEG</item>
+        <item>RIGHTARM</item>
+        <item>RIGHTARM</item>
+        <item>RIGHTLEG</item>
+        <item>RIGHTTORSO</item>
+        <item>CENTRETORSO</item>
+        <item>LEFTTORSO</item>
+        <item>LEFTARM</item>
+        <item>LEFTLEG</item>
+        <item>HEAD</item>
+    </string-array>
+    <string-array name="ov_vehicle_locations">
+        <item>FRONT</item>
+        <item>RIGHT</item>
+        <item>RIGHT</item>
+        <item>TURRET</item>
+        <item>FRONT</item>
+        <item>FRONT</item>
+        <item>FRONT</item>
+        <item>TURRET</item>
+        <item>LEFT</item>
+        <item>LEFT</item>
+        <item>TURRET</item>
+    </string-array>
+    <string-array name="tw_vehicle_locations">
+        <item>FRONT</item>
+        <item>FRONT</item>
+        <item>FRONT</item>
+        <item>RIGHT</item>
+        <item>FRONT</item>
+        <item>FRONT</item>
+        <item>FRONT</item>
+        <item>LEFT</item>
+        <item>TURRET</item>
+        <item>TURRET</item>
+        <item>TURRET</item>
+    </string-array>
+    <string-array name="tw_vehicle_side_locs">
+        <item>LEFT</item>
+        <item>LEFT</item>
+        <item>LEFT</item>
+        <item>FRONT</item>
+        <item>LEFT</item>
+        <item>LEFT</item>
+        <item>LEFT</item>
+        <item>REARSIDE</item>
+        <item>TURRET</item>
+        <item>TURRET</item>
+        <item>TURRET</item>
+    </string-array>
+</resources>
