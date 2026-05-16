@@ -1,0 +1,28 @@
+SCENARIO>=Test Scenario,1,Attacker,Defender,0,-1
+SCEN_FLAVOUR>=The Defender selects a short edge as their home edge and the Attacker gets the opposite short edge as their home edge.
+SCEN_SETUP>=The Defender selects a short edge as their home edge and the Attacker gets the opposite short edge as their home edge.
+SCEN_ATTACK>=The Attacker enters the battlefield from the Attacker’s home edge during the Movement Phase of turn 1. Attacking units may only exit via their home edge; exiting via any other edge for any reason counts as unit destruction.
+SCEN_DEFEND>=The Defender’s forces are deployed on the play area within 10 hexes of their home edge, prior to the first turn’s Initiative. Defending units may only exit via the Defender’s home edge; exiting via any other edge for any reason counts as unit destruction.
+ADDUNIT
+STARTOVBUILDING
+HEADER:Emplacement,Heavy,0,STANDARD,0,0,0,AMBUSHER,STANDARD,TW,false,BUILDING
+SEGMENT:BUILDING,59,1,0,STANDARD
+EQUIPMENT:WEAPON,AC/20,1,BUILDING,0,0,true,1,6,false,false,0,STD
+EQUIPMENT:AMMO,Ammo - AC/20,2,BUILDING,0,0,true,2,10,10,STD,6
+TIC:1,1
+ENDUNIT
+ADDUNIT
+STARTOVBUILDING
+HEADER:Emplacement,Medium,0,STANDARD,0,0,0,AMBUSHER,STANDARD,TW,false,BUILDING
+SEGMENT:BUILDING,59,1,0,STANDARD
+EQUIPMENT:WEAPON,AC/10,1,BUILDING,0,0,true,1,5,false,false,0,STD
+EQUIPMENT:AMMO,Ammo - AC/10,2,BUILDING,0,0,true,2,20,20,STD,5
+TIC:1,1
+ENDUNIT
+OPFOR>=1,Warhammer,WHM-6D,3,5,1,Hammy,WALK
+RESERVEUNIT>=2,Shadow Hawk,SHD-5M,4,4,1,Shade,WALK
+RESERVEUNIT>=3,Emplacement,Heavy,4,4,1,A,STILL
+RESERVEUNIT>=4,Emplacement,Heavy,4,4,1,B,STILL
+RESERVEUNIT>=5,Emplacement,Medium,4,4,1,A,STILL
+RESERVEUNIT>=6,Emplacement,Medium,4,4,1,B,STILL
+WAYPOINT>=1,ADD_UNIT,TURN,2,It appears in the north east corner - a shadow hawk,0,0

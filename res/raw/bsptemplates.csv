@@ -1,0 +1,15 @@
+﻿Name,Cost,Target Number,Damage Per Group,Number of Damage Groups,Damage Type,Card Type
+Light Bombing,12,6,5,3,AE,BOMBING
+Heavy Bombing,20,7,5,6,AE,BOMBING
+Light Air Strike,9,5,5,2,NA,AIRSTRIKE
+Heavy Air Strike,16,6,5,4,NA,AIRSTRIKE
+Strafing,22,7,5,3,DE,STRAFING
+Bluff,5,0,0,0,NA,BLUFF
+Light Air Cover,5,0,0,4/4/9/11/11,NA,AIRCOVER
+Heavy Air Cover,8,0,0,9/9/5/6/6,NA,AIRCOVER
+Light Density,4,9,5,2,AE,MINEFIELD
+Medium Density,8,8,5,4,AE,MINEFIELD
+Heavy Density,12,7,5,6,AE,MINEFIELD
+Thumper,12,8,5,3/1,AE,ARTILLERY
+Sniper,18,8,5,4/2,AE,ARTILLERY
+Long Tom,28,8,5,5/3/1,AE,ARTILLERY
