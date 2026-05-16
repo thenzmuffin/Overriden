@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.total.overiden.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_Catalog"
+            app:destination="@id/DisplayUnitFragment" />
+        <action
+            android:id="@+id/action_ForceList"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_NewGame"
+            app:destination="@id/GameSetupFragment" />
+        <action
+            android:id="@+id/action_SelectGame"
+            app:destination="@id/SelectGameFragment" />
+        <action
+            android:id="@+id/action_ConnectToGame"
+            app:destination="@id/ConnectToGameFragment" />
+        <action
+            android:id="@+id/action_MaintainAI"
+            app:destination="@id/MaintainAIFragment" />
+        <action
+            android:id="@+id/action_MaintainScenario"
+            app:destination="@id/MaintainScenarioFragment" />
+        <action
+            android:id="@+id/create_map_link"
+            app:destination="@id/createMap" />
+    </fragment>
+    <fragment
+        android:id="@+id/MaintainAIFragment"
+        android:name="com.total.artificial.AiSelectionFragment"
+        android:label="AI Fragment"
+        tools:layout="@layout/fragment_ai_selection">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_EditDeck"
+            app:destination="@id/MaintainAIDeckFragment">
+            <argument
+                android:name="deckId"
+                android:defaultValue="-1" />
+        </action>
+        <action
+            android:id="@+id/action_EditCommander"
+            app:destination="@id/MaintainAICommanderFragment">
+            <argument
+                android:name="deckId"
+                android:defaultValue="-1" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/MaintainScenarioFragment"
+        android:name="com.total.scenario.ScenarioSelectionFragment"
+        android:label="Scenario Fragment"
+        tools:layout="@layout/fragment_scenario_selection">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/MaintainAIDeckFragment"
+        android:name="com.total.artificial.AiConfigureDeckFragment"
+        android:label="AI Deck Fragment"
+        tools:layout="@layout/fragment_artificial_configure_deck">
+        <argument
+            android:name="deckId"
+            android:defaultValue="-1" />
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/MaintainAICommanderFragment"
+        android:name="com.total.artificial.AiConfigureCommanderFragment"
+        android:label="AI Commander Fragment"
+        tools:layout="@layout/fragment_artificial_configure_commander">
+        <argument
+            android:name="deckId"
+            android:defaultValue="-1" />
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/DisplayUnitFragment"
+        android:name="com.total.overiden.DisplayUnitFragment"
+        android:label="Catalog Fragment"
+        tools:layout="@layout/fragment_display_unit">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SelectBspFragment"
+        android:name="com.total.overiden.SelectBspFragment"
+        android:label="BSP Fragment"
+        tools:layout="@layout/fragment_select_bsp">
+        <argument
+            android:name="gameID"
+            android:defaultValue="-1" />
+        <action
+            android:id="@+id/action_start_game"
+            app:popUpTo="@id/FirstFragment"
+            app:destination="@id/GamePlayFragment">
+            <argument
+                android:name="gameID"
+                android:defaultValue="-1" />
+        </action>
+        <action
+            android:id="@+id/action_configure_ai"
+            app:destination="@+id/ConfigAIFragment">
+            <argument
+                android:name="gameID"
+                android:defaultValue="-1" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.total.overiden.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_edit_forcelist"
+            app:destination="@id/EditListFragment" >
+            <argument
+                android:name="forceKey"
+                android:defaultValue="-1" />
+        </action>
+        <action
+            android:id="@+id/action_edit_force_list_tw"
+            app:destination="@id/EditListFragment" >
+            <argument
+                android:name="forceKey"
+                android:defaultValue="-1" />
+            <argument
+                android:name="forceType"
+                android:defaultValue="TW" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/EditListFragment"
+        android:name="com.total.overide.EditListFragment"
+        android:label="@string/edit_list_fragment_label"
+        tools:layout="@layout/fragment_edit_list2">
+
+        <action
+            android:id="@+id/action_edit_forcelist"
+            app:destination="@id/SecondFragment" />
+        <argument
+            android:name="forceKey"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <argument
+            android:name="forceType"
+            android:defaultValue="OV" />
+    </fragment>
+    <fragment
+        android:id="@+id/GameSetupFragment"
+        android:name="com.total.overiden.GameSetupFragment"
+        android:label="Setup New Game"
+        tools:layout="@layout/fragment_game_setup">
+        <argument
+            android:name="gameID"
+            android:defaultValue="-1" />
+        <action
+            android:id="@+id/action_start_game"
+            app:popUpTo="@id/FirstFragment"
+            app:destination="@id/GamePlayFragment">
+            <argument
+                android:name="gameID"
+                android:defaultValue="-1" />
+        </action>
+        <action
+            android:id="@+id/action_configure_ai"
+            app:destination="@+id/ConfigAIFragment">
+            <argument
+                android:name="gameID"
+                android:defaultValue="-1" />
+        </action>
+        <action
+            android:id="@+id/action_bsp_select"
+            app:destination="@id/SelectBspFragment">
+            <argument
+                android:name="gameID"
+                android:defaultValue="-1" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/ConfigAIFragment"
+        android:name="com.total.overiden.ConfigureAIFragment"
+        android:label="AI Config Fragment"
+        tools:layout="@layout/fragment_configure_a_i">
+        <argument
+            android:name="gameID"
+            android:defaultValue="-1" />
+        <action
+            android:id="@+id/action_start_game"
+            app:popUpTo="@id/FirstFragment"
+            app:destination="@id/GamePlayFragment">
+            <argument
+                android:name="gameID"
+                android:defaultValue="-1" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/SelectGameFragment"
+        android:name="com.total.overiden.SelectGameFragment"
+        android:label="Select Game"
+        tools:layout="@layout/fragment_game_setup">
+
+        <action
+            android:id="@+id/action_start_game"
+            app:popUpTo="@id/FirstFragment"
+            app:destination="@id/GamePlayFragment">
+            <argument
+                android:name="gameID"
+                android:defaultValue="-1" />
+        </action>
+        <action
+            android:id="@+id/action_reconnect"
+            app:popUpTo="@id/FirstFragment"
+            app:destination="@id/GameSetupFragment">
+            <argument
+                android:name="gameID"
+                android:defaultValue="-1" />
+        </action>
+        <action
+            android:id="@+id/action_client"
+            app:popUpTo="@id/FirstFragment"
+            app:destination="@id/ConnectToGameFragment">
+            <argument
+                android:name="gameID"
+                android:defaultValue="-1" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/ConnectToGameFragment"
+        android:name="com.total.overiden.BluetoothConnectFragment"
+        android:label="Connect To Game"
+        tools:layout="@layout/fragment_bluetooth_connect">
+        <argument
+            android:name="gameID"
+            android:defaultValue="-1" />
+        <action
+            android:id="@+id/action_start_game"
+            app:popUpTo="@id/FirstFragment"
+            app:destination="@id/GamePlayFragment">
+            <argument
+                android:name="gameID"
+                android:defaultValue="-1" />
+        </action>
+        <action
+            android:id="@+id/action_bsp_select"
+            app:destination="@id/SelectBspFragment">
+            <argument
+                android:name="gameID"
+                android:defaultValue="-1" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/GamePlayFragment"
+        android:name="com.total.overiden.GamePlayFragment"
+        android:label="Play Game - {gameName}"
+        tools:layout="@layout/fragment_game_play">
+
+        <argument
+            android:name="gameID"
+            android:defaultValue="-1" />
+        <argument
+            android:name="gameName"
+            android:defaultValue="Unknown" />
+    </fragment>
+    <fragment
+        android:id="@+id/createMap"
+        android:name="com.total.scenario.CreateMapFragment"
+        android:label="Create Map"
+        tools:layout="@layout/fragment_create_map">
+    </fragment>
+</navigation>
